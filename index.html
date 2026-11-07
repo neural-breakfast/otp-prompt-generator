@@ -74,9 +74,9 @@
         <div class="input-group">
             <label for="genre">Genre:</label>
             <select id="genre">
-                <option value="scifi">Sci-Fi</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="mystery">Mystery</option>
+                <option value="fluff">Fluff</option>
+                <option value="angst">Angst</option>
+                <option value="au">Alternate Universe</option>
             </select>
         </div>
 
@@ -89,20 +89,17 @@
         // Stores prompts based on genre
         // Use [name1] and [name2] as placeholders
         const prompts = {
-            scifi: [
-                "[name1] and [name2] discover a hidden broadcast coming from the edge of the solar system.",
-                "While repairing the outer hull, [name1] finds a message scratched into the metal by [name2]—who denies ever being there.",
-                "[name1] accidentally activates an ancient AI that refuses to speak to anyone except [name2].",
-                "[name1]: hey man lol",
-                "NSFW//<br><br><br><strong>[name1]</strong> and <strong>[name2]</strong> own a store together and on a particularly slow day, <strong>[name2]</strong> finds themself pinned up against a wall in the stockroom by <strong>[name1]</strong>.",
-              
+            fluff: [
+                "[name2] buying [name1] a special treat when they go out shopping.",
+                "[name1] giving [name2] a tight hug that makes them lose their breath.",
+                "[name1] staying up half the night to finish a game with [name2].",
             ],
-            fantasy: [
+            angst: [
                 "[name1] and [name2] find a magical map that only reveals itself when they hold hands.",
                 "A cursed artifact binds [name1]'s shadow to [name2], forcing them to share every movement.",
                 "[name1] trades away their ability to lie, just as [name2] asks a dangerous question."
             ],
-            mystery: [
+            au: [
                 "[name1] receives an anonymous package containing [name2]'s missing diary.",
                 "During a blackout, [name1] and [name2] find a locked door in the house that was never there before.",
                 "[name1] discovers a clue pointing directly to [name2] as the mastermind behind the heist."
