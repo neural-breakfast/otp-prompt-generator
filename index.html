@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing Prompt Generator</title>
+    <title>OTP Prompt Generator</title>
     <style>
         body {
             font-family: sans-serif;
             max-width: 600px;
             margin: 40px auto;
             padding: 0 20px;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: rgb(138, 31, 31);
+        
         }
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color:transparent;
         }
         .input-group {
             margin-bottom: 15px;
@@ -28,15 +25,17 @@
             font-weight: bold;
         }
         input, select, button {
+        	color: white;
+            background-color: #303030;
             width: 100%;
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 10px;
             box-sizing: border-box;
         }
         button {
-            background-color: #007bff;
+            background-color: #303030;
             color: white;
             border: none;
             font-size: 16px;
@@ -44,13 +43,13 @@
             margin-top: 15px;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #1f1e1e;
         }
         #prompt-output {
             margin-top: 25px;
             padding: 20px;
-            background-color: #e9ecef;
-            border-left: 4px solid #007bff;
+            background-color: #303030;
+            color: white;
             border-radius: 4px;
             font-style: normal;
             min-height: 50px;
@@ -93,7 +92,10 @@
             scifi: [
                 "[name1] and [name2] discover a hidden broadcast coming from the edge of the solar system.",
                 "While repairing the outer hull, [name1] finds a message scratched into the metal by [name2]—who denies ever being there.",
-                "[name1] accidentally activates an ancient AI that refuses to speak to anyone except [name2]."
+                "[name1] accidentally activates an ancient AI that refuses to speak to anyone except [name2].",
+                "[name1]: hey man lol",
+                "NSFW//<br><br><br><strong>[name1]</strong> and <strong>[name2]</strong> own a store together and on a particularly slow day, <strong>[name2]</strong> finds themself pinned up against a wall in the stockroom by <strong>[name1]</strong>.",
+              
             ],
             fantasy: [
                 "[name1] and [name2] find a magical map that only reveals itself when they hold hands.",
