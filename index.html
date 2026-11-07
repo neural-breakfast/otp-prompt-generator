@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Prompt Generator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #prompt-output {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+            font-style: italic;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Writing Prompt Generator</h1>
+        
+        <div class="input-group">
+            <label for="name1">Character 1 Name:</label>
+            <input type="text" id="name1" value="Alex">
+        </div>
+
+        <div class="input-group">
+            <label for="name2">Character 2 Name:</label>
+            <input type="text" id="name2" value="Jordan">
+        </div>
+
+        <div class="input-group">
+            <label for="genre">Select Genre:</label>
+            <select id="genre">
+                <option value="scifi">Sci-Fi</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+            </select>
+        </div>
+
+        <button onclick="generatePrompt()">Generate Prompt</button>
+
+        <div id="prompt-output">Click the button to generate a prompt!</div>
+    </div>
+
+    <script>
+        // Store your prompts categorized by genre
+        // Use [name1] and [name2] as placeholders where you want the names to appear
+        const prompts = {
+            scifi: [
+                "[name1] and [name2] discover a hidden broadcast coming from the edge of the solar system.",
+                "While repairing the outer hull, [name1] finds a message scratched into the metal by [name2]—who denies ever being there.",
+                "[name1] accidentally activates an ancient AI that refuses to speak to anyone except [name2]."
+            ],
+            fantasy: [
+                "[name1] and [name2] find a magical map that only reveals itself when they hold hands.",
+                "A cursed artifact binds [name1]'s shadow to [name2], forcing them to share every movement.",
+                "[name1] trades away their ability to lie, just as [name2] asks a dangerous question."
+            ],
+            mystery: [
+                "[name1] receives an anonymous package containing [name2]'s missing diary.",
+                "During a blackout, [name1] and [name2] find a locked door in the house that was never there before.",
+                "[name1] discovers a clue pointing directly to [name2] as the mastermind behind the heist."
+            ]
+        };
+
+        function generatePrompt() {
+            const name1 = document.getElementById('name1').value.trim() || "Character 1";
+            const name2 = document.getElementById('name2').value.trim() || "Character 2";
+            const selectedGenre = document.getElementById('genre').value;
+
+            const genrePrompts = prompts[selectedGenre];
+            
+            // Pick a random prompt from the chosen genre array
+            const randomIndex = Math.floor(Math.random() * genrePrompts.length);
+            let rawPrompt = genrePrompts[randomIndex];
+
+            // Replace the template tags with user input
+            let finalPrompt = rawPrompt.replace(/\[name1\]/g, name1).replace(/\[name2\]/g, name2);
+
+            // Display the result
+            document.getElementById('prompt-output').innerText = finalPrompt;
+        }
+    </script>
+
+</body>
+</html>
