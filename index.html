@@ -52,7 +52,7 @@
             background-color: #e9ecef;
             border-left: 4px solid #007bff;
             border-radius: 4px;
-            font-style: italic;
+            font-style: normal;
             min-height: 50px;
         }
     </style>
@@ -60,20 +60,20 @@
 <body>
 
     <div class="container">
-        <h1>Writing Prompt Generator</h1>
+        <!-- <h1>Writing Prompt Generator</h1> -->
         
         <div class="input-group">
-            <label for="name1">Character 1 Name:</label>
-            <input type="text" id="name1" value="Alex">
+            <!--<label for="name1">Character 1 Name:</label> -->
+            <input type="text" id="name1" value="Character A">
         </div>
 
         <div class="input-group">
-            <label for="name2">Character 2 Name:</label>
-            <input type="text" id="name2" value="Jordan">
+            <!-- <label for="name2">Character 2 Name:</label> -->
+            <input type="text" id="name2" value="Chaarcter B">
         </div>
 
         <div class="input-group">
-            <label for="genre">Select Genre:</label>
+            <label for="genre">Genre:</label>
             <select id="genre">
                 <option value="scifi">Sci-Fi</option>
                 <option value="fantasy">Fantasy</option>
@@ -87,8 +87,8 @@
     </div>
 
     <script>
-        // Store your prompts categorized by genre
-        // Use [name1] and [name2] as placeholders where you want the names to appear
+        // Stores prompts based on genre
+        // Use [name1] and [name2] as placeholders
         const prompts = {
             scifi: [
                 "[name1] and [name2] discover a hidden broadcast coming from the edge of the solar system.",
