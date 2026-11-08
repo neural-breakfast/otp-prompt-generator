@@ -62,6 +62,28 @@
             border-top: 1px solid black;
             padding-top: 10px;
         }
+
+        #genre-counts {
+            margin-top: 15px;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+           
+            padding-top: 10px;
+        }
+        #genre-counts p {
+            margin: 0 0 5px 0;
+            font-weight: bold;
+            color: white;
+        }
+        #genre-counts ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        #genre-counts li {
+            margin-bottom: 3px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -95,6 +117,7 @@
     <div id="disclaimer">
         Disclaimer: Generate at your own risk.
     </div>
+    <div id="genre-counts"></div>
 
     <script>
         // Stores prompts based on genre
@@ -104,6 +127,103 @@
                 "[name2] buying [name1] a special treat when they go out shopping.",
                 "[name1] giving [name2] a tight hug that makes them lose their breath.",
                 "[name1] staying up half the night to finish a game with [name2].",
+                "[name1] and [name2] resting together and talking to each other before falling asleep.",
+            "[name2] and [name1] touching their foreheads against each other, sharing kisses.",
+            "[name2] and [name1] exploring each others' bodies, but not in a sexual way. Finding their different birthmarks, looking over each others' scars and sharing the stories behind them, running their hands over one another and just appreciating the feeling of the other person next to them.",
+            "[name1] and [name2] go to a fair/amusement park and [name1] wants to go on the roller coaster and [name2] agrees. Later, [name2] regrets their decision and ends up clinging onto [name1] for dear life.",
+            "[name2] and [name1] are on a ferris wheel, and everything is going great - until it gets stuck at the very top. For thirty whole minutes.",
+            "[name2] prevents [name1] from getting out of bed by cuddling them.",
+            "[name1] is about to leave for work. [name2] asks them if they've forgotten anything, and [name1] gives them a kiss. [name2] turns red and opens their hand to reveal [name1]'s keys/wallet/etc., saying 'I meant this, but thanks.'",
+            "[name1] and [name2] playing with sidewalk chalk like they're kids again.",
+            "[name1] and [name2] huddled by the fireplace at night after spending the day in the fresh snow.",
+            "[name2] and [name1]'s first holiday season together.",
+            "[name2] wants to use their laptop on the couch, but [name1] always occupies the space in their lap.",
+            "[name1] doesn't like talking on the phone, but [name2] always calls them instead of texting. [name2] admits that it's because they want to hear [name1]'s voice.",
+            "[name1] wakes to find that it had snowed overnight and gets excited about playing in it. [name2] gets excited because this means that when [name1] comes inside, it will be time for cuddling by the fire.",
+            "[name2] drags [name1] into the freezing cold to make a snowman.",
+            "[name2] and [name1] adopting a pet, and arguing over potential names.",
+            "[name1] being careful (or not at all careful) taking off [name2]'s shirt because [name2] is extremely ticklish.",
+            "[name1] taking [name2] out for Valentine's Day to cheer them up after their original plans with someone else fell through. As [name1] tries their best to make [name2] happy and succeeds after only a few attempts, [name2] realizes they would have rather been with [name1] anyways.",
+            "[name2] hurt their ankle and is laid up with a cast and crutches. [name1] is sitting next to them, doodling little hearts on their cast to cheer them up.",
+            "[name2] lends their jacket to [name1]. When [name1] is home, they realize they still have [name2]'s sweater and find [name2]'s iPod. Out of curiosity, [name1] looks through [name2]'s music and finds a playlist titled with [name1]'s name.",
+            "[name1] is alone in the rain because they forgot to bring an umbrella, [name2] offers to share theirs.",
+            "[name2] telling really dumb or corny jokes to [name1], thinking they are so clever and funny. [name1] just thinks [name2] is adorable for thinking the jokes are funny.",
+            "[name1] teaching [name2] how to kiss, and [name2] ends up kissing [name1] really quick, nervously asks 'Like that?' and leaves [name1] silent and flustered for a moment.",
+            "[name2] absolutely loves the taste of the chap stick/lip balm [name1] uses, so they keep stealing kisses from [name1].",
+            "[name1] and [name2] falling asleep together with their heads on the other's shoulder/head in the backseat of the car while their friend is driving.",
+            "[name2] holding a sobbing [name1]. [name1] cries themselves to sleep with their face buried into [name2].",
+            "[name1] and [name2] sleeping on top of each other (bed, couch, hammock, etc.) when [name2] falls down on the floor.",
+            "[name1] and [name2] watching a horror movie. [name1] can't sleep that night and [name2] comforts them in a cuddle.",
+            "[name2] tossing snowballs at [name1]'s window, not knowing the window is open and has no screen.",
+            "[name2] gets the hiccups, causing [name1] to laugh every time they try to talk until [name1] gets the hiccups too.",
+            "[name2] and [name1] break up, but they have a pet and neither of them want to give it up. Then they spend a few days each with the pet separately. But it kinda helps them get together again.",
+            "[name1] and [name2] at a theme park or carnival, and walking towards one of the many games to win a large stuffed animal. [name1] is sure that they can win the game, but after many attempts (and a lot of cash down the drain) [name1] gives up. [name2], however, tries and succeeds on their first go.",
+            "[name1] and [name2] unable to sleep after watching a horror movie, but neither will admit that the movie scared them.",
+            "[name1] trying to get something on their computer to work. While they’re getting frustrated and flipping out, [name2] is sitting nearby cracking up.",
+            "[name2] likes stealing [name1]'s phone to change [name1]'s phone wallpaper into something stupid (like unattractive pictures of [name1]'s face or doing something like picking their nose). [name2] is doing another routine swipe of [name1]'s phone, but doesn't have the heart to change it because this time because [name1]'s phone wallpaper is a cute picture of the two of them (like their first date together, or the only picture they have together).",
+            "[name1] cuddling with a body pillow, pretending that it's [name2].",
+            "[name2] getting shy about being naked in front of [name1] for the first time.",
+            "[name2] and [name1] were separated for several years for reasons they couldn't help. They finally find each other and have a heartfelt reunion.",
+            "[name1]'s mom gives [name1] and [name2] very cheesy, matching shirts/sweaters/scarfs. [name2] does their very best to pretend that they love it.",
+            "[name2] having to help [name1] undress after an injury.",
+            "[name2] snuggling up to [name1] because it's cold.",
+            "[name1] using [name2]'s lap as a pillow.",
+            "[name2] buying [name1] a special treat when they go out shopping.",
+            "[name1] giving [name2] a tight hug that makes them lose their breath.",
+            "[name1] staying up half the night to finish a game with [name2].",
+            "[name2] giving [name1] a back massage when they flop on the couch or bed.",
+            "[name2] making a goofy face until [name1] notices and laughs.",
+            "[name2] trying their best to be quiet while [name1] is taking a nap.",
+            "[name1] helping [name2] dry and brush their hair after a shower.",
+            "[name2] running out in the middle of the night to get a snack that [name1] is craving.",
+            "[name1] wrapping a blanket around [name2] when they are sitting on the couch and watching a show.",
+            "[name2] tucking [name1]'s hair behind their ear to help them get it out of their face.",
+            "[name1] sharing a drink with [name2] from the same straw.",
+            "[name1] doing a chore they know [name2] isn't fond of.",
+            "[name2] wearing clothes in [name1]'s favorite color.",
+            "[name2] tracing their names together in the sand.",
+            "[name1] writing [name2] name in a heart/under the love umbrella/etc. in their notebook together with their own name.",
+            "[name2] and [name1] sharing a soft smile across a crowded room.",
+            "[name1] and [name2] making out until they're breathless.",
+            "[name2] calming [name1] down when they have a bad dream.",
+            "[name2] following [name1]'s family traditions that they enjoy.",
+            "[name1] telling [name2] a dumb joke just to see their smile.",
+            "[name1] participating in [name2]'s hobby even if it doesn't personally interest them.",
+            "[name2] buying [name1] something unrequested because it made [name2] think of them.",
+            "[name2] lightly kissing [name1] on top of a freshly formed bruise.",
+            "[name1] and [name2] recreating their first kiss.",
+            "[name1] giving [name2] a kiss before going to work and they are still in bed.",
+            "[name2] making [name1] their favorite meal when they are having a hard day.",
+            "[name2] traveling long distances just to see [name1].",
+            "[name2] tucking the sheets around [name1] when they stir during the night.",
+            "[name2] holding [name1]'s hands when they are shaking.",
+            "[name1] and [name2] spending the night on the perfect hill for stargazing.",
+            "[name2] and [name1] throwing food for the ducks at the duck pond.",
+            "[name1] and [name2] having a picnic under a large fruit tree in the middle of summer.",
+            "[name1] and [name2] going to explore an abandoned house on the edge of town.",
+            "[name2] and [name1] testing beds and couches at a furniture store.",
+            "[name1] and [name2] playing on the swings at a small playground that nobody goes to anymore.",
+            "[name1] and [name2] lighting fall-scented candles.",
+            "[name2] and [name1] carving pumpkins.",
+            "[name1] and [name2] making crafts and having a playful argument over their creative differences.",
+            "[name1] and [name2] decorating their house with seasonal decorations.",
+            "[name1] and [name2] drowning in oversized sweaters during chilly days.",
+            "[name1] and [name2]'s child coming to sleep with them after having a bad dream.",
+            "[name1] and [name2] remembering their first kiss… and they have very different takes on it.",
+            "[name2] hiding in a closet to jump out and surprise [name1], but [name1] just keeps not going near the closet by chance.",
+            "[name2] and [name1] tossing coins in a well and making wishes.",
+            "[name1] and [name2]  living together for the first time.",
+            "[name2] and [name1] texting.", 
+            "[name1] and [name2] writing letters to each other.",
+            "[name1] and [name2] holding hands because there's a crowd but not letting go when they get out of it.",
+            "[name2] and [name1] going swimming together.",
+            "[name1] and [name2] shopping, with one of them being way more excited about it than the other who just kinda drags around and carries their bags.",
+            "[name2] sneaking into [name1]'s room through their window.",
+            "[name1] and [name2] cooking something without the recipe, because [name2] is confident they know how to cook it from memory.",
+            "[name2] and [name1] taking couple's quizzes on the Internet.",
+            "[name1] is scared of the thunder and [name2] tries to calm them down during an particularly heavy storm.",
+            "[name1] and [name2] sharing ice cream/cake/a dessert.",
+            
             ],
             angst: [
                 "[name1] and [name2] find a magical map that only reveals itself when they hold hands.",
@@ -116,6 +236,29 @@
                 "[name1] discovers a clue pointing directly to [name2] as the mastermind behind the heist."
             ]
         };
+
+        function displayGenreCounts() {
+            const countsContainer = document.getElementById('genre-counts');
+            
+            // Format key names for nicer display
+            const genreLabels = {
+                fluff: "Fluff",
+                angst: "Angst",
+                au: "Alternate Universe"
+            };
+
+            for (const genre in prompts) {
+                const label = genreLabels[genre] || genre;
+                const count = prompts[genre].length;
+                html += `<li><strong>${label}:</strong> ${count} prompt${count === 1 ? '' : 's'}</li>`;
+            }
+            
+            html += '</ul>';
+            countsContainer.innerHTML = html;
+        }
+
+        // Run on page load
+        displayGenreCounts();
 
         function generatePrompt() {
             const name1 = document.getElementById('name1').value.trim() || "Character 1";
