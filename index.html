@@ -54,6 +54,14 @@
             font-style: normal;
             min-height: 50px;
         }
+        #disclaimer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            border-top: 1px solid black;
+            padding-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +91,9 @@
         <button onclick="generatePrompt()">Generate Prompt</button>
 
         <div id="prompt-output">Click the button to generate a prompt!</div>
+    </div>
+    <div id="disclaimer">
+        Disclaimer: Generate at your own risk.
     </div>
 
     <script>
@@ -122,6 +133,7 @@
 
             // Display the result
             document.getElementById('prompt-output').innerText = finalPrompt;
+
         }
     </script>
 
